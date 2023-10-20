@@ -4,7 +4,7 @@ Our code is implemented based on DSLP open source code(https://github.com/chenya
 
 # Training:
 ```
-python3 /home/wzc/DSLP/train.py /data2/wzc/wmt14.en-de_kd/ --source-lang en --target-lang de  --save-dir /data2/wzc/MT/WMT14/en-de/train_save_glat --eval-tokenized-bleu \
+python3 train.py wmt14.en-de_kd/ --source-lang en --target-lang de  --save-dir WMT14/en-de/train_save_glat --eval-tokenized-bleu \
    --keep-interval-updates 3 --save-interval-updates 500 --validate-interval-updates 500 --maximize-best-checkpoint-metric \
    --eval-bleu-remove-bpe --best-checkpoint-metric bleu --log-format simple --log-interval 100 \
    --eval-bleu --eval-bleu-detok space --keep-last-epochs 5 --keep-best-checkpoints 10  --fixed-validation-seed 7 --ddp-backend=no_c10d \
