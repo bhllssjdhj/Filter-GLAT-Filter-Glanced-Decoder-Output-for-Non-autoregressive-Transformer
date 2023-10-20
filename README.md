@@ -3,7 +3,7 @@ Filter-GLAT:Filter Glanced Decoder Output for Non-autoregressive Transformer
 Our code is implemented based on DSLP open source code(https://github.com/chenyangh/DSLP). 
 
 # Training:
-'''
+```
 python3 /home/wzc/DSLP/train.py /data2/wzc/wmt14.en-de_kd/ --source-lang en --target-lang de  --save-dir /data2/wzc/MT/WMT14/en-de/train_save_glat --eval-tokenized-bleu \
    --keep-interval-updates 3 --save-interval-updates 500 --validate-interval-updates 500 --maximize-best-checkpoint-metric \
    --eval-bleu-remove-bpe --best-checkpoint-metric bleu --log-format simple --log-interval 100 \
@@ -14,9 +14,9 @@ python3 /home/wzc/DSLP/train.py /data2/wzc/wmt14.en-de_kd/ --source-lang en --ta
    --label-smoothing 0.1 --fp16  --reset-dataloader --reset-optimizer \
    --activation-fn gelu --dropout 0.1 --max-tokens 6400 --update-freq 10 --glat-mode glat \
    --length-loss-factor 0.1 --pred-length-offset --encoder-layers 6 --decoder-layers 6
-'''
+```
 
 # Evaluation:
-'''
+```
 
-'''
+```
