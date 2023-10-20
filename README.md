@@ -18,5 +18,11 @@ python3 train.py wmt14.en-de_kd/ --source-lang en --target-lang de  --save-dir W
 
 # Evaluation:
 ```
-
+fairseq-generate wmt14.de-en_kd --path WMT14/de-en/train_save_glat/checkpoint_last.pt \
+    --gen-subset test --task translation_glat \
+    --cpu --max-tokens 2000 --quiet \
+    --iter-decode-max-iter 0  \
+    --iter-decode-eos-penalty 0 --beam 1 --remove-bpe \
+    --print-step --batch-size 1\
+    --iter-decode-with-beam 1
 ```
